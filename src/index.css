@@ -1,0 +1,111 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+html, body{
+  margin: 0;
+}
+
+.btn-container{
+  width: max-content;
+  background-color: #313131;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.App{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons{
+  width: 10%;
+  display: grid;
+  grid-template-areas:
+      "clear inverse modulo divide"
+      "seven eight nine multiply"
+      "four five six subtract"
+      "one two three add"
+      "zero zero dot equals";
+  gap: .1em;
+}
+
+#zero{
+  grid-area: zero;
+}
+
+#divide > button,
+#multiply > button, 
+#subtract  > button,
+#add  > button,
+#equals  > button{
+  background-color: orange;
+}
+
+
+#clear > button,
+#inverse > button,
+#modulo > button{
+  background-color: rgb(79, 79, 79);
+}
+
+#clear > button:hover,
+#inverse > button:hover,
+#modulo > button:hover{
+  background-color: rgb(69, 69, 69);
+}
+
+
+
+#zero > button{
+  border-bottom-left-radius: 1rem;
+}
+#equals > button{
+  border-bottom-right-radius: 1rem;
+}
+
+
+#divide > button:hover,
+#multiply > button:hover, 
+#subtract  > button:hover,
+#add  > button:hover,
+#equals  > button:hover{
+  background-color: rgb(170, 111, 0);
+}
+
+
+button{
+  cursor:pointer;
+  background-color: #898a8a;
+  color: white;
+  padding: 2em;
+  font-size: 1.3rem;
+  font-weight: 800;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+button:hover{
+  background-color: rgb(96, 96, 96);
+}
+
+
+.display p{
+  margin: 0;
+  padding: 1.5em 1em 1em 1em;
+  font-size: 2rem;
+}
+
+.display{
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  color: white;
+  background-color: #313131;
+  display: flex;
+  justify-content: flex-end;
+}
